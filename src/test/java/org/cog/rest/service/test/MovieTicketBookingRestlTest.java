@@ -49,6 +49,6 @@ public class MovieTicketBookingRestlTest {
         String resp = response.getEntity(String.class);
         System.out.println("Got stuff: " + resp);
 
-        assertEquals("{\"MESSAGE\":\"50 Seats are Available.\"}", resp);
+        assertEquals("{\"MESSAGE\":\"Your Seats Nos. are [0, 1, 2, 3, 4]\"}", resp);
     }
 }

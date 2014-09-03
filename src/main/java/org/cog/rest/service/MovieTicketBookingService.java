@@ -40,7 +40,7 @@ public class MovieTicketBookingService {
 			BookingResponse response  = bookingManager.bookTicket(message.getShowTime(), message.getNoOfSeat());
 			Map<String,String> returnResponse = new HashMap<String,String>();
 			if(response.getStatusCode() == 200){
-				returnResponse.put("MESSAGE", "Your Seats Nos. are "+response.getAllocatedSeats().toArray(new String[response.getAllocatedSeats().size()]));
+				returnResponse.put("MESSAGE", "Your Seats Nos. are "+response.getAllocatedSeats().toString());
 			}else{
 				returnResponse.put("MESSAGE", "Not Able to book ticket. There are "+response.getNoOfAvaibleSeat()+" Available.");
 			}
